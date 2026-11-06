@@ -454,6 +454,7 @@
         <div><label>MC / DOT number</label><input name="mc_dot" placeholder="MC 000000 / DOT 0000000" onblur="lookupCarrier(this.value)"><div id="mcHint" style="font-size:.78rem;margin-top:4px"></div></div>
         <div><label>Phone *</label><input name="phone" required type="tel" placeholder="(555) 555-0123"></div>
       </div>
+      <div class="frow full"><div><label>Email *</label><input name="email" required type="email" placeholder="you@example.com" autocomplete="email"></div></div>
       <div class="frow full">
         <div>
           <label>Equipment & quantity *</label>
@@ -531,6 +532,7 @@
     <form id="leaseForm" onsubmit="return sendLeaseToOwnLead(this,event)" style="margin-top:24px">
       <div class="frow"><div><label>Full name *</label><input name="name" required></div><div><label>Company name</label><input name="company"></div></div>
       <div class="frow"><div><label>MC / DOT number</label><input name="mc_dot"></div><div><label>Phone *</label><input name="phone" required type="tel"></div></div>
+      <div class="frow full"><div><label>Email *</label><input name="email" required type="email" autocomplete="email"></div></div>
       <div class="frow"><div><label>Your state</label><select name="state" id="leaseState"><option value="">Select…</option></select></div><div><label>Start date</label><input name="start_date" type="date"></div></div>
       <div class="frow full"><div><label>Anything else?</label><textarea name="message" rows="3"></textarea></div></div>
       <button class="btn" style="width:100%">Submit lease-to-own application</button>
@@ -586,7 +588,7 @@ const COPY = {
     process: ["Proceso sencillo", "De la solicitud a las llaves en 5 pasos", "Solicita en línea", "Formulario de 2 minutos. Dinos qué equipo necesitas.", "Te llamamos", "El mismo día hábil o al siguiente.", "Firma y paga", "Contrato transparente, primer pago + depósito.", "Inspecciona y retira", "Inspección conjunta de la unidad, documentada y firmada.", "Ponte en marcha", "Recoge en nuestro patio de Chicago y empieza a ganar."],
     why: ["Por qué Esquire", "Creado por camioneros, para camioneros", "También operamos camiones", "Esquire forma parte de un grupo de transporte activo. Arrendamos el mismo equipo que pondríamos a nuestros propios conductores.", "Patio local, personas reales", "Ubicación en el área de Chicago. Ven a ver el equipo antes de firmar nada.", "Flexible para flotas pequeñas", "Una unidad o diez. Condiciones para propietarios-operadores y empresas en crecimiento."],
     quote: ["Comienza ahora", "Solicita una cotización", "Cuéntanos qué necesitas y te responderemos en un día hábil con disponibilidad y precios."],
-    labels: ["Nombre completo *", "Empresa", "Número MC / DOT", "Teléfono *", "Equipo y cantidad *", "+ Añadir equipo…", "Tu estado", "Selecciona…", "Opción preferida *", "Fecha de inicio", "Cuándo deseas el equipo", "¿Algo más?", "Enviar solicitud"],
+    labels: ["Nombre completo *", "Empresa", "Número MC / DOT", "Teléfono *", "Correo electrónico *", "Equipo y cantidad *", "+ Añadir equipo…", "Tu estado", "Selecciona…", "Opción preferida *", "Fecha de inicio", "Cuándo deseas el equipo", "¿Algo más?", "Enviar solicitud"],
     placeholders: ["Juan Pérez", "Tu empresa LLC", "Situación actual, preguntas…"],
     formOk: "✓ ¡Gracias! Recibimos tu solicitud y nos pondremos en contacto en un día hábil.",
     footer: ["Leasing de transportadores de autos y remolques para propietarios-operadores y pequeñas flotas. Parte de un grupo de transporte del área de Chicago junto con Fortius Logistics (transporte de autos) y Eclipse Solutions (reclutamiento de conductores).", "Navegación", "Equipos", "Opciones de leasing", "Cómo funciona", "Solicitar cotización", "Contacto", "© 2026 Esquire Logistics Group · Los precios y la disponibilidad pueden cambiar. Contáctanos para conocer el inventario actual."],
@@ -613,7 +615,7 @@ const COPY = {
     process: ["Простой процесс", "От заявки до ключей за 5 шагов", "Подайте заявку онлайн", "Форма займёт 2 минуты. Расскажите, какая техника нужна.", "Мы вам перезвоним", "В тот же или следующий рабочий день.", "Подпишите и оплатите", "Прозрачный договор, первый платёж + депозит.", "Осмотр и выдача", "Совместный осмотр техники с документацией и подписью.", "Выезжайте", "Заберите технику с нашей площадки в Чикаго и начинайте зарабатывать."],
     why: ["Почему Esquire", "Создано дальнобойщиками для дальнобойщиков", "Мы тоже эксплуатируем тягачи", "Esquire — часть действующей транспортной группы. Мы сдаём в лизинг ту же технику, на которой посадили бы своих водителей.", "Местная площадка, реальные люди", "Мы находимся в районе Чикаго. Приезжайте и посмотрите технику до подписания договора.", "Гибко для небольших автопарков", "Одна единица или десять. Условия для владельцев-операторов и растущих компаний."],
     quote: ["Начать", "Запросить расчёт", "Расскажите, что вам нужно, и мы ответим в течение одного рабочего дня с информацией о наличии и ценах."],
-    labels: ["Полное имя *", "Название компании", "Номер MC / DOT", "Телефон *", "Техника и количество *", "+ Добавить технику…", "Ваш штат", "Выберите…", "Предпочтительный вариант *", "Дата начала", "Когда вам нужна техника", "Что-нибудь ещё?", "Отправить заявку"],
+    labels: ["Полное имя *", "Название компании", "Номер MC / DOT", "Телефон *", "Электронная почта *", "Техника и количество *", "+ Добавить технику…", "Ваш штат", "Выберите…", "Предпочтительный вариант *", "Дата начала", "Когда вам нужна техника", "Что-нибудь ещё?", "Отправить заявку"],
     placeholders: ["Иван Иванов", "Ваша компания LLC", "Текущая ситуация, вопросы…"],
     formOk: "✓ Спасибо! Мы получили вашу заявку и свяжемся с вами в течение одного рабочего дня.",
     footer: ["Лизинг автовозов и прицепов для владельцев-операторов и небольших автопарков. Часть транспортной группы района Чикаго вместе с Fortius Logistics (перевозка автомобилей) и Eclipse Solutions (подбор водителей).", "Навигация", "Техника", "Варианты лизинга", "Как это работает", "Получить расчёт", "Контакты", "© 2026 Esquire Logistics Group · Цены и наличие могут меняться. Свяжитесь с нами, чтобы узнать актуальный список техники."],
@@ -659,8 +661,8 @@ function applyLanguage(lang){
   setText("#process .kicker, #process .title, #process .step h3, #process .step p", c.process);
   setText(".why .kicker, .why .title, .why .item h3, .why .item p", c.why);
   setText(".apply .kicker, .apply .title, .apply .sub", c.quote);
-  setText("#leadForm label", [c.labels[0], c.labels[1], c.labels[2], c.labels[3], c.labels[4], c.labels[6], c.labels[8], c.labels[9], "", c.labels[11]]);
-  document.querySelector("#eqSel option").textContent = c.labels[5];
+  setText("#leadForm label", [c.labels[0], c.labels[1], c.labels[2], c.labels[3], c.labels[4], c.labels[5], c.labels[7], c.labels[9], c.labels[10], "", c.labels[12]]);
+  document.querySelector("#eqSel option").textContent = c.labels[6];
   const equipmentChoices = document.querySelectorAll("#eqSel option");
   if(equipmentChoices[4]) equipmentChoices[4].textContent = lang === "es" ? "Camión tractor" : "Седельный тягач";
   if(equipmentChoices[5]) equipmentChoices[5].textContent = lang === "es" ? "Dodge RAM 3500 Crew Cab 2022 (hotshot)" : "Dodge RAM 3500 Crew Cab 2022 (хотшот)";
@@ -671,9 +673,9 @@ function applyLanguage(lang){
   if(equipmentChoices[11]) equipmentChoices[11].textContent = lang === "es" ? "RAM 3500 Heavy Duty - Pickup 0947" : "RAM 3500 Heavy Duty - Пикап 0947";
   if(equipmentChoices[12]) equipmentChoices[12].textContent = lang === "es" ? "RAM 3500 Heavy Duty - Pickup 1084" : "RAM 3500 Heavy Duty - Пикап 1084";
   if(equipmentChoices[13]) equipmentChoices[13].textContent = lang === "es" ? "RAM 3500 Heavy Duty - Pickup 1154" : "RAM 3500 Heavy Duty - Пикап 1154";
-  document.querySelectorAll("#stateSel option, select[name=option] option").forEach((o,i)=>{ if(!o.value) o.textContent = c.labels[7]; });
+  document.querySelectorAll("#stateSel option, select[name=option] option").forEach((o,i)=>{ if(!o.value) o.textContent = c.labels[8]; });
   setText("select[name=option] option", c.terms);
-  document.querySelector(".frow span").textContent = c.labels[10]; document.querySelector("#leadForm .btn").textContent = c.labels[12];
+  document.querySelector(".frow span").textContent = c.labels[11]; document.querySelector("#leadForm .btn").textContent = c.labels[13];
   document.querySelector("input[name=name]").placeholder = c.placeholders[0]; document.querySelector("input[name=company]").placeholder = c.placeholders[1]; document.querySelector("textarea").placeholder = c.placeholders[2];
   document.querySelector(".form-ok").textContent = c.formOk;
   document.getElementById("detailRequest").textContent = c.request;
@@ -1236,6 +1238,8 @@ function sendLeaseToOwnLead(form, ev){
     company: form.company.value,
     mc_dot: form.mc_dot.value,
     phone: form.phone.value,
+    email: form.email.value,
+    language: currentLang,
     equipment: "2022 Dodge RAM 3500 Crew Cab (Hotshot)",
     state: form.state.value,
     option: "Lease to Own",
@@ -1258,6 +1262,8 @@ function sendLead(form, ev){
     company: form.company.value,
     mc_dot: form.mc_dot.value,
     phone: form.phone.value,
+    email: form.email.value,
+    language: currentLang,
     equipment: picked.join("; "),
     state: form.state.value,
     option: form.option.value,
