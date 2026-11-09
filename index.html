@@ -1223,7 +1223,7 @@ function openLeaseApplication(){
 function closeLeaseApplication(){ document.getElementById("leaseModal").classList.remove("open"); }
 document.getElementById("leaseClose").addEventListener("click", closeLeaseApplication);
 document.getElementById("leaseModal").addEventListener("click", event => { if(event.target.id === "leaseModal") closeLeaseApplication(); });
-const APPLICATION_ENDPOINT = "https://script.google.com/macros/s/AKfycbyTQjvvryzd7dwL5B4zKuv6M2GuYbUwxQNf36etn1vOTpcqF7_toDrvycx1-DTC0AnL/exec";
+const APPLICATION_ENDPOINT = "https://script.google.com/macros/s/AKfycbys4fUyjogcrYqUJYvEUxiM05wgYASv7h84b4u-0GgXRJESlKf5bFQWaXlxTofz3QHd/exec";
 
 function deliverApplication(data){
   const deliveryForm = document.createElement("form");
